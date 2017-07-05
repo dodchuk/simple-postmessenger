@@ -1,0 +1,16 @@
+{
+  "name": "simple-postmessenger",
+  "description": "Talk to iFrames with postMessage",
+  "authors": [
+    "dodchuk"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dodchuk/postmessenger",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
