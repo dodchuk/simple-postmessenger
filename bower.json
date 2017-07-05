@@ -5,7 +5,7 @@
     "dodchuk"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/dodchuk/postmessenger",
+  "homepage": "https://github.com/dodchuk/simple-postmessenger",
   "ignore": [
     "**/.*",
     "node_modules",
