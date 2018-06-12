@@ -1,8 +1,11 @@
 {
   "name": "simple-postmessenger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Talk to iFrames with postMessage",
-  "main": "index.js",
+  "main": "dist/postmessenger.es6.js",
+  "scripts": {
+    "build": "./node_modules/.bin/babel -r babel-polyfill ./lib -d dist --ignore='node_modules,dist'"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/dodchuk/simple-postmessenger.git"
@@ -11,5 +14,13 @@
   "bugs": {
     "url": "https://github.com/dodchuk/simple-postmessenger/issues"
   },
-  "homepage": "https://github.com/dodchuk/simple-postmessenger"
+  "homepage": "https://github.com/dodchuk/simple-postmessenger",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.24.1"
+  }
 }
