@@ -1,16 +1,10 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 // Talk to iFrames with postMessage
 // Cross-window messaging API is supported by all modern browsers including IE8.
 // It allows windows/frames from multiple domains to communicate with each other.
 
-exports.default = {
+export default {
 	/**
   * @param {Object} json
   * @param {String} target
@@ -36,7 +30,10 @@ exports.default = {
    * @param {SyntheticEvent} e
    */
 		var receiveMessage = function receiveMessage(e) {
-			return callback(_this._unserialize(e.data));
+			if (!e.data || typeof e.data.type !== 'undefined' && e.data.type.indexOf('webpack') > -1) {
+				return;
+			}
+			callback(_this._unserialize(e.data));
 		};
 
 		if (window.addEventListener) {
