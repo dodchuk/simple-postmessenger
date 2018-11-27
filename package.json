@@ -1,6 +1,6 @@
 {
   "name": "simple-postmessenger",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Talk to iFrames with postMessage",
   "main": "dist/postmessenger.es6.js",
   "scripts": {
